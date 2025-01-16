@@ -1,3 +1,15 @@
-output "name" {
-    value = aws_instance.web_server.arn
+output "kms_key_arn" {
+    value = aws_kms_key.s3_key.arn
+}
+
+output "vpc_id" {
+    value = aws_vpc.custom_vpc.id
+}
+
+output "subnet_id" {
+    value = aws_subnet.public_subnet1.id
+}
+
+output "route_table_id" {
+    value = aws_route_table.public_rt.id
 }
